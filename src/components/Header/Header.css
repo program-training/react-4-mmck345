@@ -1,0 +1,8 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: azure;
+    margin-bottom: 30px;
+    color: darkblue;
+    padding: 20px 0px;
+}
