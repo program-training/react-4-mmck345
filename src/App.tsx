@@ -1,10 +1,24 @@
 import "./App.css";
-import { Example } from "./components/Example/Example";
+import UserContextProvider from "./Context/UserContext";
+import ThemeContextProvider from "./Context/ThemeContext";
+import TextContextProvider from "./Context/TextContext";
+
+import Grandpa from "./components/Grandpa/Grandpa";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 function App() {
   return (
     <>
-      <Example />{" "}
+    <TextContextProvider>
+      <UserContextProvider>
+        <ThemeContextProvider>
+            <Header/>
+            <Grandpa/>
+            <Main/>
+          </ThemeContextProvider>
+        </UserContextProvider>
+      </TextContextProvider>
     </>
   );
 }
